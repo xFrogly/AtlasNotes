@@ -1,4 +1,4 @@
-# AtlasNotes 🗺️
+# AtlasNotes 
 
 A professional note management system built with vanilla JavaScript. Navigate your thoughts with precision using rich text editing, smart categories, and powerful search.
 
