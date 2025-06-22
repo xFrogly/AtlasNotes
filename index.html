@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AtlasNotes - Professional Note Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="brand">
+                <i class="fas fa-mountain brand-icon"></i>
+                <div>
+                    <h1>AtlasNotes</h1>
+                    <p>Navigate your thoughts with precision</p>
+                </div>
+            </div>
+        </header>
+
+        <aside class="sidebar">
+            <div class="search-container">
+                <input type="text" class="search-input" id="searchInput" placeholder="Search notes...">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+
+            <div class="stats">
+                <div class="stat-item">
+                    <i class="fas fa-file-alt stat-icon"></i>
+                    <div>
+                        <div class="stat-number" id="totalNotes">0</div>
+                        <div class="stat-label">Total Notes</div>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-tags stat-icon"></i>
+                    <div>
+                        <div class="stat-number" id="totalCategories">0</div>
+                        <div class="stat-label">Categories</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="categories">
+                <h3><i class="fas fa-folder-open"></i> Categories</h3>
+                <div class="category-list" id="categoryList">
+                    <button class="category-btn active" data-category="all">
+                        <i class="fas fa-list"></i> All Notes
+                    </button>
+                </div>
+            </div>
+
+            <button class="new-note-btn" id="newNoteBtn">
+                <i class="fas fa-plus"></i> New Note
+            </button>
+
+            <div class="notes-list" id="notesList">
+                <div class="empty-state">
+                    <i class="fas fa-sticky-note empty-icon"></i>
+                    <h3>No notes yet</h3>
+                    <p>Create your first note to get started!</p>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="note-header">
+                <input type="text" class="note-title-input" id="noteTitleInput" placeholder="Enter note title...">
+                <select class="category-select" id="categorySelect">
+                    <option value="personal"><i class="fas fa-user"></i> Personal</option>
+                    <option value="work"><i class="fas fa-briefcase"></i> Work</option>
+                    <option value="ideas"><i class="fas fa-lightbulb"></i> Ideas</option>
+                    <option value="todo"><i class="fas fa-check-square"></i> Todo</option>
+                    <option value="study"><i class="fas fa-graduation-cap"></i> Study</option>
+                </select>
+            </div>
+
+            <div class="editor-container">
+                <div class="editor-toolbar">
+                    <button class="toolbar-btn" id="boldBtn" title="Bold">
+                        <i class="fas fa-bold"></i>
+                    </button>
+                    <button class="toolbar-btn" id="italicBtn" title="Italic">
+                        <i class="fas fa-italic"></i>
+                    </button>
+                    <button class="toolbar-btn" id="underlineBtn" title="Underline">
+                        <i class="fas fa-underline"></i>
+                    </button>
+                    <div class="toolbar-separator"></div>
+                    <button class="toolbar-btn" id="listBtn" title="Bullet List">
+                        <i class="fas fa-list-ul"></i>
+                    </button>
+                    <button class="toolbar-btn" id="numberedListBtn" title="Numbered List">
+                        <i class="fas fa-list-ol"></i>
+                    </button>
+                    <div class="toolbar-separator"></div>
+                    <span class="word-count" id="wordCount">0 words</span>
+                </div>
+                <textarea class="note-content" id="noteContent" placeholder="Start writing your note here..."></textarea>
+            </div>
+
+            <div class="note-actions">
+                <button class="btn btn-export" id="exportBtn">
+                    <i class="fas fa-download"></i> Export
+                </button>
+                <button class="btn btn-delete" id="deleteBtn">
+                    <i class="fas fa-trash"></i> Delete
+                </button>
+                <button class="btn btn-save" id="saveBtn">
+                    <i class="fas fa-save"></i> Save
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <div class="notification" id="notification">
+        <i class="fas fa-check-circle"></i>
+        <span id="notificationText">Note saved successfully!</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
