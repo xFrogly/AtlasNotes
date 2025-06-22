@@ -60,7 +60,6 @@ body {
     min-height: 100vh;
 }
 
-/* Header Styles */
 .header {
     grid-column: 1 / -1;
     background: linear-gradient(135deg, var(--atlas-primary) 0%, var(--atlas-secondary) 50%, var(--atlas-accent) 100%);
@@ -136,7 +135,6 @@ body {
     transform: scale(1.1) rotate(15deg);
 }
 
-/* Sidebar Styles */
 .sidebar {
     background: var(--bg-secondary);
     border-radius: 16px;
@@ -374,7 +372,6 @@ body {
     font-size: 1.2rem;
 }
 
-/* Main Content Styles */
 .main-content {
     background: var(--bg-secondary);
     border-radius: 16px;
@@ -542,7 +539,6 @@ body {
     box-shadow: var(--shadow);
 }
 
-/* Notification Styles */
 .notification {
     position: fixed;
     top: 20px;
@@ -573,7 +569,6 @@ body {
     background: var(--warning);
 }
 
-/* Responsive Design */
 @media (max-width: 1024px) {
     .container {
         grid-template-columns: 1fr;
@@ -641,7 +636,6 @@ body {
     }
 }
 
-/* Animation Classes */
 .fade-in {
     animation: fadeIn 0.5s ease-in;
 }
